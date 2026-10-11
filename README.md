@@ -1,101 +1,66 @@
-# uxvisualengine
+# UXVisualEngine
 
-> Generate cleaner interfaces, faster. Built in TypeScript on Next.js. 22 routes (/api/audit, /api/baseline, /api/checkout); 5 entry points (index.html, index.js, index.ts). TESTED: 13 test files, via Playwright.
+> Inspect the interface. Make the next decision obvious.
 
-The implementation summary below is intentionally conservative. Claims from NORTHSTAR are not presented as shipped functionality.
+A local-first design intelligence engine that inspects projects, synthesizes design systems, captures rendered interfaces, critiques quality, detects convergence, and applies bounded improvements with evidence.
 
-- [GitHub repository](https://github.com/M4G3LL4N0/uxvisualengine)
-- [Project site](https://uxvisualengine-public.vercel.app/)
+[CLI entry point](src/cli/uxve.ts) · [NOAERTH](https://www.noaerth.com)
 
-<!-- NOAERTH_IMAGE_SLOT: uxvisualengine/hero -->
+![UXVisualEngine design laboratory](assets/images/hero.svg)
 
-## What it is
+## The visual improvement loop
 
-Generate cleaner interfaces, faster. Built in TypeScript on Next.js. 22 routes (/api/audit, /api/baseline, /api/checkout); 5 entry points (index.html, index.js, index.ts). TESTED: 13 test files, via Playwright.
+UXVisualEngine turns a project into inspectable design evidence. It infers the framework, routes, components, tokens, and dependencies; retrieves design knowledge; synthesizes a design system; captures a rendered interface; critiques it across multiple dimensions; runs QA and originality checks; and only then considers a bounded improvement with rollback.
 
-This repository is part of the NOAERTH venture ecosystem. The current public-facing evidence identifies it as a early-stage project rather than a production-ready system.
+![UXVisualEngine visual loop](assets/images/visual-loop.svg)
 
-## Capabilities
-
-### Available evidence
-
-- The repository contains the implementation and documentation associated with the project description above.
-- The technology signals currently visible in the local project are listed in the technical notes below.
-- No additional capability is asserted here without a direct implementation reference.
-
-### Experimental or planned
-
-Roadmap intent is deliberately not represented as shipped functionality. Review NORTHSTAR and source implementation together before adding future-facing claims.
-
-<!-- NOAERTH_IMAGE_SLOT: uxvisualengine/workflow -->
-
-## How it works
-
-The current evidence supports a repository-level application or tool workflow, but does not provide enough verified detail in the Part 1 record to publish a component-level architecture diagram. The architecture slot is reserved for a deterministic diagram after the source flow is reviewed.
-
-<!-- NOAERTH_IMAGE_SLOT: uxvisualengine/architecture -->
-
-## Quick start
-
-### Prerequisites
-
-- A runtime suitable for `Node.js`.
-- A clean checkout of this repository.
-
-### Install
-
-```sh
-pnpm install
+```text
+infer → retrieve → synthesize → capture → critique → QA/originality → improve → verify/rollback
 ```
 
-### Run locally
+## Use it locally
 
-```sh
-pnpm run dev
+```bash
+`pnpm install`
+`pnpm uxve doctor`
+`pnpm uxve review .`
+`pnpm uxve capture http://localhost:3000`
+`pnpm run verify`
 ```
 
-### Build
+The documented modifier provider is deliberately narrow and requires explicit configuration. `pnpm uxve improve .` is a dry run; applying changes requires `--apply` and a configured provider.
 
-```sh
-pnpm run build
-```
+## Evidence board
 
-### Test
+![UXVisualEngine evidence board](assets/images/evidence-board.svg)
 
-```sh
-pnpm run test
-```
+| Measurement | Meaning |
+|---|---|
+| 13 critique dimensions | Source-backed; see `v4/VERIFIED_METRICS.json` for definition and status. |
+| 4 viewport classes | Source-backed; see `v4/VERIFIED_METRICS.json` for definition and status. |
+| 9 quality gates | Source-backed; see `v4/VERIFIED_METRICS.json` for definition and status. |
+| 3 default improvement iterations | Source-backed; see `v4/VERIFIED_METRICS.json` for definition and status. |
 
-Commands are included only when they were detected in the repository manifest; verify environment-specific requirements before deployment.
+## Architecture
 
-## Technical notes
+Next.js/React/TypeScript surface around engine, CLI, HTTP, MCP, optional browser/provider adapters, baselines, and decision memory. Playwright, axe-core, registries, and model critics are optional adapters rather than assumed capabilities.
 
-- **Primary language:** JavaScript/TypeScript
-- **Runtime:** Node.js
-- **Package manager:** pnpm
-- **Framework and integration signals:** See the source tree and package manifests; no framework claim is made here without a direct implementation reference.
-- **Entry-point signals:** package.json
-- **Test evidence:** tsconfig.test.json
-- **Repository topics:** `index`, `next-js`, `playwright`, `react`, `scripts`, `stack`, `tailwind-css`, `terminal`
+## What it does not prove
 
-## Status and roadmap
+- Provider-backed improvement requires a configured modifier.
+- Rendered evidence and screen-reader behavior were not rerun here.
+- Live readiness claims remain unverified.
 
-**Current status:** Early-stage project.
+Static source analysis cannot certify screen-reader behavior, focus order, live URLs, or visual quality. Rendered evidence is a required part of the intended proof loop.
 
-**Current:** The repository and its documented implementation are available for inspection.
+## Source map
 
-**Next:** Reconcile the README, source behavior, and safe public product language before adding deeper examples or diagrams.
+- `src/engine`
+- `src/cli/uxve.ts`
+- `src/mcp/server.ts`
+- `package.json`
+- `src/app/tokens.css`
 
-**Future:** Product direction is maintained separately and must not be read as a shipped feature list.
+## Status
 
-## Contributing and license
-
-Follow the repository's existing contribution and licensing files where present. This README does not invent an open-source license or contribution policy.
-
-## Visual documentation
-
-Image slots are intentionally comments until authentic screenshots, deterministic diagrams, or approved conceptual visuals exist. No absent image file is referenced.
-
-## NOAERTH
-
-[NOAERTH](https://www.noaerth.com) is the venture ecosystem associated with this project.
+Research-stage design infrastructure / active development. The strongest differentiator is the evidence-preserving loop, not a claim that every interface can be autonomously improved.
